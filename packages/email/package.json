@@ -1,0 +1,44 @@
+{
+  "name": "email",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Emails",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -w -p tsconfig.json",
+    "start": "yarn build && mailing preview",
+    "lint": "eslint ./src/**"
+  },
+  "dependencies": {
+    "@sendgrid/client": "^7.7.0",
+    "mailing": "0.7.4",
+    "mailing-core": "0.7.4",
+    "mjml-core": "^4",
+    "mjml-react": "^2",
+    "nodemailer": "^6.7.8",
+    "react": "18",
+    "react-dom": "18"
+  },
+  "devDependencies": {
+    "@types/mjml": "^4.7.0",
+    "@types/mjml-react": "^2.0.5",
+    "@types/node": "^16",
+    "@types/nodemailer": "^6.4.5",
+    "@types/react": "18",
+    "@types/react-dom": "18",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "ts-node": "^9.1.1",
+    "tslib": "^2.4.0",
+    "typescript": "4.7.2"
+  },
+  "resolutions": {
+    "@types/react": "18.0.15",
+    "@types/react-dom": "18.0.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "files": [
+    "./dist/**/*"
+  ]
+}

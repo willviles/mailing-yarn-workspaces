@@ -1,0 +1,21 @@
+{
+  "name": "root",
+  "private": true,
+  "packageManager": "yarn@1.22.17",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/mailing",
+      "**/mailing-core"
+    ]
+  },
+  "devDependencies": {
+    "turbo": "^1.1.2"
+  },
+  "scripts": {
+    "clean": "find . -name 'yarn.lock' -delete && find . -name node_modules -depth -type d -print -exec rm -rf {} + && echo 'complete'"
+  }
+}
